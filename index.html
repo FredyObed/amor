@@ -3,164 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#e75480">
 <title>Para mi Valesita 💕</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  
-  body {
-    font-family: 'Georgia', serif;
-    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
-    padding: 20px;
-  }
-
-  .contenedor {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 25px;
-    padding: 50px 40px;
-    max-width: 600px;
-    width: 100%;
-    box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
-    text-align: center;
-    animation: aparecer 1.5s ease;
-    position: relative;
-    z-index: 2;
-  }
-
-  @keyframes aparecer {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  h1 {
-    color: #d6336c;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    font-style: italic;
-  }
-
-  .corazon {
-    font-size: 4em;
-    animation: latido 1.2s infinite;
-    display: inline-block;
-    margin: 15px 0;
-  }
-
-  @keyframes latido {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-  }
-
-  .mensaje {
-    color: #555;
-    font-size: 1.15em;
-    line-height: 1.8;
-    margin: 25px 0;
-    font-family: 'Georgia', serif;
-  }
-
-  .firma {
-    margin-top: 30px;
-    color: #d6336c;
-    font-style: italic;
-    font-size: 1.1em;
-  }
-
-  button {
-    margin-top: 30px;
-    padding: 15px 40px;
-    font-size: 1.1em;
-    background: linear-gradient(135deg, #ff6b9d, #d6336c);
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-family: 'Georgia', serif;
-    box-shadow: 0 8px 20px rgba(214, 51, 108, 0.4);
-  }
-
-  button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(214, 51, 108, 0.6);
-  }
-
-  .oculto { display: none; }
-
-  .sorpresa {
-    margin-top: 25px;
-    padding: 20px;
-    background: #fff0f5;
-    border-radius: 15px;
-    color: #d6336c;
-    font-size: 1.1em;
-    line-height: 1.7;
-    animation: aparecer 1s ease;
-  }
-
-  /* Corazones flotantes */
-  .corazon-flotante {
-    position: fixed;
-    color: #ff6b9d;
-    font-size: 20px;
-    animation: flotar 6s linear infinite;
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  @keyframes flotar {
-    0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
-  }
+:root{--rosa:#e75480;--rosa-claro:#ffd6e5;--rosa-suave:#fff3f7;--vino:#a52f58;--texto:#4d3b43;--blanco:rgba(255,255,255,.94);--sombra:0 20px 60px rgba(165,47,88,.18)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Georgia,"Times New Roman",serif;color:var(--texto);background:radial-gradient(circle at 10% 10%,rgba(255,255,255,.55),transparent 25%),radial-gradient(circle at 90% 20%,rgba(255,182,210,.45),transparent 25%),linear-gradient(135deg,#ff9a9e 0%,#ffd1dc 45%,#f9e8ef 100%);min-height:100vh;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 20% 80%,rgba(255,255,255,.35),transparent 25%),radial-gradient(circle at 80% 70%,rgba(255,255,255,.28),transparent 24%);z-index:-1}
+.barra{position:fixed;top:16px;left:50%;transform:translateX(-50%);width:min(940px,calc(100% - 24px));background:rgba(255,255,255,.78);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.65);border-radius:999px;box-shadow:0 10px 30px rgba(107,37,65,.12);display:flex;align-items:center;justify-content:center;gap:8px;padding:10px;z-index:100}.barra a{text-decoration:none;color:var(--vino);font-size:.9rem;padding:9px 14px;border-radius:999px;transition:.25s;white-space:nowrap}.barra a:hover{background:var(--rosa-suave);transform:translateY(-1px)}
+.seccion{width:min(1080px,calc(100% - 28px));margin:0 auto;padding:92px 0 30px}.tarjeta{background:var(--blanco);border:1px solid rgba(255,255,255,.7);border-radius:30px;box-shadow:var(--sombra);backdrop-filter:blur(10px)}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding-top:90px}.hero-card{width:min(920px,100%);padding:54px 34px;text-align:center;position:relative;overflow:hidden}.hero-card:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(255,182,210,.28);right:-110px;top:-110px}.etiqueta{display:inline-block;padding:8px 14px;border-radius:999px;background:#fff0f5;color:var(--vino);font-size:.88rem;margin-bottom:18px}h1{color:#c93d69;font-size:clamp(2.8rem,7vw,5.7rem);line-height:1.02;font-style:italic;margin-bottom:14px}.subtitulo{max-width:700px;margin:0 auto;font-size:clamp(1.08rem,2vw,1.35rem);line-height:1.8;color:#6b5961}.corazon-grande{display:inline-block;font-size:5rem;margin:18px 0;animation:latido 1.25s infinite;filter:drop-shadow(0 8px 16px rgba(214,51,108,.2))}@keyframes latido{0%,100%{transform:scale(1)}50%{transform:scale(1.17)}}.botones{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:26px}.btn{border:none;cursor:pointer;font:inherit;border-radius:999px;padding:13px 20px;transition:.25s}.btn-principal{background:linear-gradient(135deg,#ff6b9d,#c93d69);color:white;box-shadow:0 10px 24px rgba(201,61,105,.28)}.btn-principal:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(201,61,105,.35)}.btn-secundario{background:#fff;color:var(--vino);border:1px solid #f0bfd0}.btn-secundario:hover{background:#fff4f8;transform:translateY(-2px)}.scroll{display:inline-block;margin-top:32px;color:#9a5e74;font-size:.95rem;animation:bajar 1.7s infinite}@keyframes bajar{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+.titulo-seccion{text-align:center;margin-bottom:30px}.titulo-seccion h2{color:var(--vino);font-size:clamp(2rem,4vw,3rem);margin-bottom:8px}.titulo-seccion p{color:#7b6970;max-width:700px;margin:auto;line-height:1.7}
+.contador-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}.contador-item{padding:22px 12px;text-align:center;background:#fff7fa;border-radius:22px;border:1px solid #f5d4e0}.numero{font-size:2rem;color:var(--rosa);font-weight:bold}.label{margin-top:5px;color:#7f6b73;font-size:.9rem}.dato-extra{text-align:center;margin-top:18px;color:#8f6575}
+.timeline{position:relative;max-width:850px;margin:0 auto}.timeline:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:3px;transform:translateX(-50%);background:linear-gradient(#ef8ead,#f9c2d5,#ef8ead);border-radius:3px}.evento{width:50%;padding:12px 28px;position:relative}.evento.izq{text-align:right}.evento.der{margin-left:50%}.evento:after{content:"";position:absolute;top:27px;width:18px;height:18px;border-radius:50%;background:#fff;border:5px solid var(--rosa);z-index:2}.evento.izq:after{right:-9px}.evento.der:after{left:-9px}.evento-card{background:#fff;border-radius:22px;padding:20px;box-shadow:0 10px 28px rgba(130,48,77,.10);border:1px solid #f5dce5}.fecha{color:var(--rosa);font-weight:bold;margin-bottom:8px;font-size:.95rem}.evento-card h3{color:var(--vino);margin-bottom:8px}.evento-card p{line-height:1.65;color:#6e5c64}
+.galeria-controles{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:20px}.ayuda{color:#7d6b72;font-size:.92rem}.galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.foto-card{position:relative;overflow:hidden;border-radius:22px;background:#fff;min-height:220px;box-shadow:0 12px 28px rgba(100,37,58,.12);border:1px solid #f0d5df}.foto-card img{display:block;width:100%;height:280px;object-fit:cover;transition:.35s}.foto-card:hover img{transform:scale(1.04)}.foto-info{padding:12px 14px 14px;background:#fff}.foto-info input{width:100%;border:1px solid #efd3df;border-radius:12px;padding:9px 10px;font:inherit;color:var(--texto);outline:none}.foto-info input:focus{border-color:#e58dab}.borrar{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;border:none;background:rgba(255,255,255,.92);color:#b13d61;cursor:pointer;font-size:1rem;box-shadow:0 5px 15px rgba(0,0,0,.1)}.galeria-vacia{grid-column:1/-1;border:2px dashed #edbfd0;padding:50px 25px;border-radius:25px;text-align:center;color:#8b6e78;background:rgba(255,255,255,.55)}.input-file{display:none}
+.recuerdos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.recuerdo{padding:24px;border-radius:24px;background:linear-gradient(145deg,#fff,#fff5f8);border:1px solid #f0d6e0;min-height:180px}.recuerdo .icono{font-size:2rem;margin-bottom:12px}.recuerdo h3{color:var(--vino);margin-bottom:8px}.recuerdo p{line-height:1.65;color:#6d5c64}
+.carta{max-width:800px;margin:auto;padding:35px 30px;position:relative;background:linear-gradient(#fffafc,#fffafc),repeating-linear-gradient(to bottom,transparent 0,transparent 32px,rgba(231,84,128,.08) 33px);border:1px solid #efd5df}.carta:before{content:"♥";position:absolute;top:18px;right:22px;color:#ef9bb6;font-size:1.6rem}.carta p{font-size:1.08rem;line-height:2;color:#5f4c55;margin-bottom:16px}.carta .cierre{color:var(--rosa);text-align:right;font-style:italic;margin-top:22px}
+.modal{position:fixed;inset:0;background:rgba(54,19,31,.48);display:none;align-items:center;justify-content:center;padding:20px;z-index:200}.modal.activo{display:flex}.modal-box{width:min(650px,100%);background:#fff;border-radius:28px;padding:34px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.25);animation:subir .35s ease}@keyframes subir{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}.modal-box h3{color:var(--vino);font-size:1.8rem;margin-bottom:15px}.modal-box p{line-height:1.8;color:#6d5962}
+.corazon-flotante{position:fixed;bottom:-40px;color:#ff6b9d;font-size:20px;animation:flotar linear forwards;pointer-events:none;z-index:0;opacity:.9}@keyframes flotar{from{transform:translateY(0) rotate(0deg);opacity:0}10%{opacity:.95}to{transform:translateY(-115vh) rotate(360deg);opacity:0}}footer{text-align:center;padding:55px 20px 70px;color:#855d6c}footer strong{color:var(--vino)}
+@media(max-width:820px){.barra{overflow-x:auto;justify-content:flex-start;scrollbar-width:none}.barra::-webkit-scrollbar{display:none}.barra a{font-size:.82rem;padding:8px 11px}.galeria,.recuerdos{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.seccion{padding-top:78px}.hero-card{padding:42px 20px}.contador-grid{grid-template-columns:repeat(2,1fr)}.timeline:before{left:18px;transform:none}.evento,.evento.der{width:100%;margin-left:0;padding:10px 0 10px 48px;text-align:left}.evento:after,.evento.izq:after,.evento.der:after{left:9px;right:auto}.galeria,.recuerdos{grid-template-columns:1fr}.foto-card img{height:310px}.carta{padding:28px 21px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.001ms!important;animation-iteration-count:1!important}}
 </style>
 </head>
 <body>
+<nav class="barra"><a href="#inicio">Inicio</a><a href="#contador">Nosotros</a><a href="#historia">Historia</a><a href="#fotos">Fotos</a><a href="#recuerdos">Recuerdos</a><a href="#carta">Carta</a></nav>
 
-<div class="contenedor">
-  <h1>Para ti, mi amor</h1>
-  <div class="corazon">❤️</div>
-  
-  <p class="mensaje">
-    <!-- ✏️ EDITA ESTE MENSAJE -->
-Y entre todas las historias que pude haber vivido, qué bonito que la vida me haya dado la oportunidad de vivir esta contigo
-    <br><br>
-    Gracias por existir y por hacerme tan feliz. 💕
-  </p>
+<section class="seccion hero" id="inicio"><div class="tarjeta hero-card"><span class="etiqueta">Una página hecha especialmente para ti 💕</span><h1>Para mi Valesita</h1><div class="corazon-grande">❤️</div><p class="subtitulo">Entre tantos lugares, tantas personas y tantas historias posibles, qué bonito que la vida haya hecho que la mía comenzara a escribirse contigo.</p><div class="botones"><a class="btn btn-principal" href="#historia">Ver nuestra historia ✨</a><button class="btn btn-secundario" onclick="abrirSorpresa()">Tengo algo que decirte 💌</button></div><div class="scroll">↓ sigue bajando, amor ↓</div></div></section>
 
-  <button onclick="mostrarSorpresa()">Haz clic aquí 💌</button>
+<section class="seccion" id="contador"><div class="titulo-seccion"><h2>Un poquito de nosotros 💗</h2><p>Porque a veces los números también pueden contar una historia.</p></div><div class="tarjeta" style="padding:28px"><div class="contador-grid"><div class="contador-item"><div class="numero" id="dias">0</div><div class="label">días desde que nos conocimos</div></div><div class="contador-item"><div class="numero" id="horas">0</div><div class="label">horas aproximadamente</div></div><div class="contador-item"><div class="numero" id="minutos">0</div><div class="label">minutos compartidos</div></div><div class="contador-item"><div class="numero" id="segundos">0</div><div class="label">segundos de nuestra historia</div></div></div><p class="dato-extra">💕 Nos conocimos el <strong>26 de abril de 2026</strong>.</p></div></section>
 
-  <div id="sorpresa" class="sorpresa oculto">
-    <!-- ✏️ EDITA ESTE MENSAJE SECRETO -->
-    <strong>Te amo más de lo que las palabras pueden decir.</strong><br>
-    Cada día a tu lado es mi día favorito. 🌹
-  </div>
+<section class="seccion" id="historia"><div class="titulo-seccion"><h2>Nuestra historia 🌷</h2><p>Una historia que empezó de una manera sencilla y terminó significando muchísimo para mí.</p></div><div class="timeline">
+<div class="evento izq"><div class="evento-card"><div class="fecha">26 de abril de 2026 🎶</div><h3>El día que nos conocimos</h3><p>Fuimos a un concierto sin saber que esa noche no solo íbamos a escuchar música. También íbamos a conocer a una persona que terminaría convirtiéndose en alguien muy especial.</p></div></div>
+<div class="evento der"><div class="evento-card"><div class="fecha">4 de mayo de 2026 💬</div><h3>Empezamos a hablar</h3><p>Y de pronto los mensajes empezaron a formar parte de nuestros días. Poco a poco te fui conociendo, riendo contigo y disfrutando cada conversación.</p></div></div>
+<div class="evento izq"><div class="evento-card"><div class="fecha">19 de junio de 2026 💐</div><h3>Ese hermoso “sí”</h3><p>Flores, una carta, nervios y una pregunta muy importante. Ese día convertimos todo lo que sentíamos en algo oficialmente nuestro.</p></div></div>
+<div class="evento der"><div class="evento-card"><div class="fecha">19 de septiembre de 2026 ❤️</div><h3>3 meses de nosotros</h3><p>Tres meses de novios, muchísimos recuerdos, risas, abrazos, besos y momentos que quiero seguir guardando contigo.</p></div></div>
+<div class="evento izq"><div class="evento-card"><div class="fecha">Hoy ✨</div><h3>Y esta historia continúa...</h3><p>Lo bonito es que aquí no termina nada. Todavía quedan muchos lugares, fotografías, aventuras y recuerdos por agregar a nuestra historia.</p></div></div>
+</div></section>
 
-  <p class="firma">— Con todo mi amor Fredy❤️‍🩹</p>
-</div>
+<section class="seccion" id="fotos"><div class="titulo-seccion"><h2>Nuestros recuerdos 📸</h2><p>Sube aquí nuestras fotos favoritas. Puedes seleccionar varias al mismo tiempo.</p></div><div class="tarjeta" style="padding:25px"><div class="galeria-controles"><div class="ayuda">Las fotos se muestran directamente en esta página.</div><div class="botones" style="margin-top:0"><label class="btn btn-principal" for="subirFotos">+ Agregar fotos</label><input class="input-file" id="subirFotos" type="file" accept="image/*" multiple><button class="btn btn-secundario" onclick="limpiarFotos()">Borrar todas</button></div></div><div class="galeria" id="galeria"><div class="galeria-vacia" id="galeriaVacia"><div style="font-size:3rem;margin-bottom:10px">🌸</div><strong>Aquí pueden ir nuestras fotos</strong><div style="margin-top:8px">Agrega las fotos que más te gusten y ponles una pequeña descripción.</div></div></div></div></section>
+
+<section class="seccion" id="recuerdos"><div class="titulo-seccion"><h2>Pequeñas cosas que amo de ti 🫶🏻</h2><p>No todo tiene que ser una gran fecha para convertirse en un recuerdo bonito.</p></div><div class="recuerdos">
+<div class="recuerdo"><div class="icono">😊</div><h3>Tu forma de hacerme reír</h3><p>Me encanta tu forma espontánea y ocurrente de ser. Incluso un día normal puede terminar siendo uno de mis favoritos contigo.</p></div>
+<div class="recuerdo"><div class="icono">🤍</div><h3>Tus abrazos</h3><p>Hay momentos en los que un abrazo tuyo dice mucho más que cualquier mensaje. Estar cerquita de ti simplemente se siente bien.</p></div>
+<div class="recuerdo"><div class="icono">✨</div><h3>La manera en que eres tú</h3><p>Me enamora poder conocerte tal como eres y descubrir cada día una parte nueva de la persona increíble que tengo a mi lado.</p></div>
+<div class="recuerdo"><div class="icono">🎶</div><h3>Aquel concierto</h3><p>Si alguien me hubiera dicho que una noche de música iba a terminar llevándome hasta ti, probablemente no lo habría creído.</p></div>
+<div class="recuerdo"><div class="icono">💬</div><h3>Nuestras conversaciones</h3><p>Desde aquellos primeros mensajes hasta todo lo que hemos compartido después, me gusta saber que poco a poco fuimos creando nuestro propio espacio.</p></div>
+<div class="recuerdo"><div class="icono">🌹</div><h3>Lo que estamos construyendo</h3><p>No busco una historia perfecta. Quiero una historia nuestra, con momentos felices, aprendizajes y muchas páginas por escribir.</p></div>
+</div></section>
+
+<section class="seccion" id="carta"><div class="titulo-seccion"><h2>Una carta para ti 💌</h2><p>Esta parte puede ser la más personal de toda la página.</p></div><div class="tarjeta carta"><p>Mi Valesita:</p><p>A veces pienso en cómo comenzó todo y me parece increíble que una fecha tan sencilla como el 26 de abril haya terminado significando tanto para mí.</p><p>Te conocí en un concierto, empezamos a hablar unos días después y, sin darnos cuenta, comenzamos a crear una historia que hoy quiero cuidar muchísimo.</p><p>Gracias por cada risa, cada abrazo, cada beso, cada conversación y cada momento que hemos compartido. Gracias por ser tú y por dejarme formar parte de tu vida.</p><p>No sé exactamente qué nos espera más adelante, pero sí sé algo: quiero seguir conociéndote, seguir haciendo recuerdos contigo y seguir encontrando nuevas razones para escogerte.</p><p class="cierre">Con todo mi amor,<br><strong>Fredy ❤️‍🩹</strong></p></div></section>
+<footer>Hecho con mucho amor para <strong>mi Valesita</strong> 💕<br><br>“Esta historia todavía tiene muchas páginas por escribir.”</footer>
+
+<div class="modal" id="modal"><div class="modal-box"><div style="font-size:3.5rem;margin-bottom:10px">💖</div><h3>Para ti, Valesita</h3><p>De todas las coincidencias que han ocurrido en mi vida, conocerte es una de las que más agradezco. No quiero que esta página tenga un final, quiero seguir agregándole fotos, recuerdos y momentos contigo. ❤️</p><button class="btn btn-principal" onclick="cerrarSorpresa()" style="margin-top:20px">Cerrar 💕</button></div></div>
 
 <script>
-  // Crear corazones flotantes
-  function crearCorazon() {
-    const corazon = document.createElement('div');
-    corazon.classList.add('corazon-flotante');
-    corazon.innerHTML = ['❤️','💕','💖','💗','💓'][Math.floor(Math.random()*5)];
-    corazon.style.left = Math.random() * 100 + 'vw';
-    corazon.style.fontSize = (Math.random() * 20 + 15) + 'px';
-    corazon.style.animationDuration = (Math.random() * 4 + 4) + 's';
-    document.body.appendChild(corazon);
-    setTimeout(() => corazon.remove(), 8000);
-  }
-  setInterval(crearCorazon, 400);
-
-  // Mostrar sorpresa
-  function mostrarSorpresa() {
-    document.getElementById('sorpresa').classList.remove('oculto');
-  }
+const fechaInicio=new Date("2026-04-26T00:00:00");
+function actualizarContador(){const ahora=new Date();let diferencia=ahora-fechaInicio;if(diferencia<0)diferencia=0;const s=Math.floor(diferencia/1000);const d=Math.floor(s/86400),h=Math.floor(s/3600),m=Math.floor(s/60);document.getElementById("dias").textContent=d.toLocaleString("es-MX");document.getElementById("horas").textContent=h.toLocaleString("es-MX");document.getElementById("minutos").textContent=m.toLocaleString("es-MX");document.getElementById("segundos").textContent=s.toLocaleString("es-MX")}
+actualizarContador();setInterval(actualizarContador,1000);
+const inputFotos=document.getElementById("subirFotos"),galeria=document.getElementById("galeria"),galeriaVacia=document.getElementById("galeriaVacia");
+inputFotos.addEventListener("change",function(){const archivos=[...this.files];if(!archivos.length)return;galeriaVacia.style.display="none";archivos.forEach(archivo=>{if(!archivo.type.startsWith("image/"))return;const lector=new FileReader();lector.onload=e=>{const card=document.createElement("div");card.className="foto-card";card.innerHTML=`<img src="${e.target.result}" alt="Recuerdo de nosotros"><button class="borrar" title="Eliminar foto">✕</button><div class="foto-info"><input type="text" placeholder="Escribe un pequeño recuerdo..."></div>`;card.querySelector(".borrar").addEventListener("click",()=>{card.remove();comprobarGaleria()});galeria.appendChild(card)};lector.readAsDataURL(archivo)});this.value=""});
+function comprobarGaleria(){galeriaVacia.style.display=galeria.querySelectorAll(".foto-card").length===0?"block":"none"}
+function limpiarFotos(){const fotos=galeria.querySelectorAll(".foto-card");if(!fotos.length)return;if(confirm("¿Seguro que quieres borrar todas las fotos de esta página?")){fotos.forEach(f=>f.remove());comprobarGaleria()}}
+function abrirSorpresa(){document.getElementById("modal").classList.add("activo");lanzarConfeti()}
+function cerrarSorpresa(){document.getElementById("modal").classList.remove("activo")}
+document.getElementById("modal").addEventListener("click",e=>{if(e.target===e.currentTarget)cerrarSorpresa()});
+const corazones=["❤️","💕","💖","💗","💓","💘","💝"];
+function crearCorazon(){const c=document.createElement("div");c.className="corazon-flotante";c.textContent=corazones[Math.floor(Math.random()*corazones.length)];c.style.left=Math.random()*100+"vw";c.style.fontSize=(Math.random()*18+15)+"px";c.style.animationDuration=(Math.random()*5+5)+"s";document.body.appendChild(c);setTimeout(()=>c.remove(),11000)}setInterval(crearCorazon,650);
+function lanzarConfeti(){for(let i=0;i<28;i++){setTimeout(()=>{const c=document.createElement("div");c.textContent=["💗","💕","❤️","✨"][Math.floor(Math.random()*4)];c.style.position="fixed";c.style.left=Math.random()*100+"vw";c.style.top="-20px";c.style.fontSize=(Math.random()*20+16)+"px";c.style.zIndex="300";c.style.pointerEvents="none";c.style.transition="transform 2.2s linear, opacity 2.2s linear";document.body.appendChild(c);requestAnimationFrame(()=>{c.style.transform=`translate(${(Math.random()-.5)*180}px, ${innerHeight+80}px) rotate(${Math.random()*500}deg)`;c.style.opacity="0"});setTimeout(()=>c.remove(),2300)},i*45)}}
 </script>
-
 </body>
 </html>
