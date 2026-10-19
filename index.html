@@ -14,7 +14,7 @@
 .titulo-seccion{text-align:center;margin-bottom:30px}.titulo-seccion h2{color:var(--vino);font-size:clamp(2rem,4vw,3rem);margin-bottom:8px}.titulo-seccion p{color:#7b6970;max-width:700px;margin:auto;line-height:1.7}
 .contador-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}.contador-item{padding:22px 12px;text-align:center;background:#fff7fa;border-radius:22px;border:1px solid #f5d4e0}.numero{font-size:2rem;color:var(--rosa);font-weight:bold}.label{margin-top:5px;color:#7f6b73;font-size:.9rem}.dato-extra{text-align:center;margin-top:18px;color:#8f6575}.dato-extra strong{color:var(--vino)}
 .timeline{position:relative;max-width:850px;margin:0 auto}.timeline:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:3px;transform:translateX(-50%);background:linear-gradient(#ef8ead,#f9c2d5,#ef8ead);border-radius:3px}.evento{width:50%;padding:12px 28px;position:relative}.evento.izq{text-align:right}.evento.der{margin-left:50%}.evento:after{content:"";position:absolute;top:27px;width:18px;height:18px;border-radius:50%;background:#fff;border:5px solid var(--rosa);z-index:2}.evento.izq:after{right:-9px}.evento.der:after{left:-9px}.evento-card{background:#fff;border-radius:22px;padding:20px;box-shadow:0 10px 28px rgba(130,48,77,.10);border:1px solid #f5dce5}.fecha{color:var(--rosa);font-weight:bold;margin-bottom:8px;font-size:.95rem}.evento-card h3{color:var(--vino);margin-bottom:8px}.evento-card p{line-height:1.65;color:#6e5c64}
-.galeria-controles{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:20px}.ayuda{color:#7d6b72;font-size:.92rem}.galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.foto-card{position:relative;overflow:hidden;border-radius:22px;background:#fff;min-height:220px;box-shadow:0 12px 28px rgba(100,37,58,.12);border:1px solid #f0d5df}.foto-card img{display:block;width:100%;height:280px;object-fit:cover;transition:.35s}.foto-card:hover img{transform:scale(1.04)}.foto-info{padding:12px 14px 14px;background:#fff}.foto-info input{width:100%;border:1px solid #efd3df;border-radius:12px;padding:9px 10px;font:inherit;color:var(--texto);outline:none}.foto-info input:focus{border-color:#e58dab}.borrar{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;border:none;background:rgba(255,255,255,.92);color:#b13d61;cursor:pointer;font-size:1rem;box-shadow:0 5px 15px rgba(0,0,0,.1)}.galeria-vacia{grid-column:1/-1;border:2px dashed #edbfd0;padding:50px 25px;border-radius:25px;text-align:center;color:#8b6e78;background:rgba(255,255,255,.55)}.input-file{display:none}
+.galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.foto-card{position:relative;overflow:hidden;border-radius:22px;background:#fff;box-shadow:0 12px 28px rgba(100,37,58,.12);border:1px solid #f0d5df;display:flex;flex-direction:column;height:100%}.foto-card img{display:block;width:100%;height:280px;object-fit:cover;transition:.35s;flex-grow:1}.foto-card:hover img{transform:scale(1.04)}.foto-info{padding:15px;background:#fff;text-align:center;font-weight:bold;color:var(--vino);font-size:1.05rem;z-index:2}
 .recuerdos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.recuerdo{padding:24px;border-radius:24px;background:linear-gradient(145deg,#fff,#fff5f8);border:1px solid #f0d6e0;min-height:180px}.recuerdo .icono{font-size:2rem;margin-bottom:12px}.recuerdo h3{color:var(--vino);margin-bottom:8px}.recuerdo p{line-height:1.65;color:#6d5c64}
 .carta{max-width:800px;margin:auto;padding:35px 30px;position:relative;background:linear-gradient(#fffafc,#fffafc),repeating-linear-gradient(to bottom,transparent 0,transparent 32px,rgba(231,84,128,.08) 33px);border:1px solid #efd5df}.carta:before{content:"♥";position:absolute;top:18px;right:22px;color:#ef9bb6;font-size:1.6rem}.carta p{font-size:1.08rem;line-height:2;color:#5f4c55;margin-bottom:16px}.carta .cierre{color:var(--rosa);text-align:right;font-style:italic;margin-top:22px}
 .modal{position:fixed;inset:0;background:rgba(54,19,31,.48);display:none;align-items:center;justify-content:center;padding:20px;z-index:200}.modal.activo{display:flex}.modal-box{width:min(650px,100%);background:#fff;border-radius:28px;padding:34px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.25);animation:subir .35s ease}@keyframes subir{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}.modal-box h3{color:var(--vino);font-size:1.8rem;margin-bottom:15px}.modal-box p{line-height:1.8;color:#6d5962}
@@ -40,7 +40,50 @@
 <div class="evento der"><div class="evento-card"><div class="fecha">Hoy ✨</div><h3>Y esta historia continúa...</h3><p>Lo bonito es que aquí no termina nada. Todavía quedan muchos lugares, fotografías, aventuras y recuerdos por agregar a nuestra historia.</p></div></div>
 </div></section>
 
-<section class="seccion" id="fotos"><div class="titulo-seccion"><h2>Nuestros recuerdos 📸</h2><p>Sube aquí nuestras fotos favoritas. Puedes seleccionar varias al mismo tiempo.</p></div><div class="tarjeta" style="padding:25px"><div class="galeria-controles"><div class="ayuda">Las fotos se muestran directamente en esta página.</div><div class="botones" style="margin-top:0"><label class="btn btn-principal" for="subirFotos">+ Agregar fotos</label><input class="input-file" id="subirFotos" type="file" accept="image/*" multiple><button class="btn btn-secundario" onclick="limpiarFotos()">Borrar todas</button></div></div><div class="galeria" id="galeria"><div class="galeria-vacia" id="galeriaVacia"><div style="font-size:3rem;margin-bottom:10px">🌸</div><strong>Aquí pueden ir nuestras fotos</strong><div style="margin-top:8px">Agrega las fotos que más te gusten y ponles una pequeña descripción.</div></div></div></div></section>
+<!-- SECCIÓN DE FOTOS MODIFICADA -->
+<section class="seccion" id="fotos"><div class="titulo-seccion"><h2>Nuestros recuerdos 📸</h2><p>Algunos de los momentos más bonitos que hemos compartido juntos.</p></div><div class="tarjeta" style="padding:25px"><div class="galeria">
+    
+    <div class="foto-card">
+        <img src="foto1.jpg" alt="Nuestro selfie juntos">
+        <div class="foto-info">Nuestro primer selfie juntos 🥰</div>
+    </div>
+    
+    <div class="foto-card">
+        <img src="foto2.jpg" alt="Tú con tu granada">
+        <div class="foto-info">Tú con tu granada 💖</div>
+    </div>
+    
+    <div class="foto-card">
+        <img src="foto3.jpg" alt="Descansando juntitos">
+        <div class="foto-info">Descansando juntitos 🤍</div>
+    </div>
+    
+    <div class="foto-card">
+        <img src="foto4.jpg" alt="Un día de compras">
+        <div class="foto-info">Un día de compras ✨</div>
+    </div>
+    
+    <div class="foto-card">
+        <img src="foto5.jpg" alt="Esa carita que amo">
+        <div class="foto-info">Esa carita que amo 💗</div>
+    </div>
+    
+    <div class="foto-card">
+        <img src="foto6.jpg" alt="Mi pirata favorita">
+        <div class="foto-info">Mi pirata favorita 🏴‍☠️</div>
+    </div>
+    
+    <div class="foto-card">
+        <img src="foto7.jpg" alt="Una noche de salida">
+        <div class="foto-info">Una noche de salida 🌙</div>
+    </div>
+
+    <div class="foto-card">
+        <img src="foto8.jpg" alt="Acostaditos juntos">
+        <div class="foto-info">Acostaditos juntos 🫶🏻</div>
+    </div>
+
+</div></div></section>
 
 <section class="seccion" id="recuerdos"><div class="titulo-seccion"><h2>Pequeñas cosas que amo de ti 🫶🏻</h2><p>No todo tiene que ser una gran fecha para convertirse en un recuerdo bonito.</p></div><div class="recuerdos">
 <div class="recuerdo"><div class="icono">😊</div><h3>Tu forma de hacerme reír</h3><p>Me encanta tu forma espontánea y ocurrente de ser. Incluso un día normal puede terminar siendo uno de mis favoritos contigo.</p></div>
@@ -69,10 +112,7 @@
 const fechaInicio=new Date("2026-04-26T00:00:00");
 function actualizarContador(){const ahora=new Date();let diferencia=ahora-fechaInicio;if(diferencia<0)diferencia=0;const s=Math.floor(diferencia/1000);const d=Math.floor(s/86400),h=Math.floor(s/3600),m=Math.floor(s/60);document.getElementById("dias").textContent=d.toLocaleString("es-MX");document.getElementById("horas").textContent=h.toLocaleString("es-MX");document.getElementById("minutos").textContent=m.toLocaleString("es-MX");document.getElementById("segundos").textContent=s.toLocaleString("es-MX")}
 actualizarContador();setInterval(actualizarContador,1000);
-const inputFotos=document.getElementById("subirFotos"),galeria=document.getElementById("galeria"),galeriaVacia=document.getElementById("galeriaVacia");
-inputFotos.addEventListener("change",function(){const archivos=[...this.files];if(!archivos.length)return;galeriaVacia.style.display="none";archivos.forEach(archivo=>{if(!archivo.type.startsWith("image/"))return;const lector=new FileReader();lector.onload=e=>{const card=document.createElement("div");card.className="foto-card";card.innerHTML=`<img src="${e.target.result}" alt="Recuerdo de nosotros"><button class="borrar" title="Eliminar foto">✕</button><div class="foto-info"><input type="text" placeholder="Escribe un pequeño recuerdo..."></div>`;card.querySelector(".borrar").addEventListener("click",()=>{card.remove();comprobarGaleria()});galeria.appendChild(card)};lector.readAsDataURL(archivo)});this.value=""});
-function comprobarGaleria(){galeriaVacia.style.display=galeria.querySelectorAll(".foto-card").length===0?"block":"none"}
-function limpiarFotos(){const fotos=galeria.querySelectorAll(".foto-card");if(!fotos.length)return;if(confirm("¿Seguro que quieres borrar todas las fotos de esta página?")){fotos.forEach(f=>f.remove());comprobarGaleria()}}
+
 function abrirSorpresa(){document.getElementById("modal").classList.add("activo");lanzarConfeti()}
 function cerrarSorpresa(){document.getElementById("modal").classList.remove("activo")}
 document.getElementById("modal").addEventListener("click",e=>{if(e.target===e.currentTarget)cerrarSorpresa()});
